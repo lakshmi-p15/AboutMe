@@ -23,5 +23,5 @@ The following **required** functionality is completed:
 
 ## Notes
 
-Migrated from kotlin synthetics to view binding
-Migrated to data binding
+* [x] Migrated from kotlin synthetics to view binding
+* [x] Migrated to data binding
