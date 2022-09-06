@@ -2,6 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <!-- Declare a variable by specifying a name and a data type. -->
+        <!-- Use fully qualified name for the type. -->
+        <variable
+            name="myName"
+            type="com.example.aboutme.MyName" />
+    </data>
     <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,7 +21,7 @@
             style="@style/nameStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/name"
+            android:text="@={myName.name}"
             android:textAlignment="center" />
 
         <EditText
@@ -25,8 +32,7 @@
             android:ems="10"
             android:hint="@string/what_is_your_nick_name"
             android:inputType="textMultiLine|textPersonName"
-            android:textAlignment="center"
-            />
+            android:textAlignment="center" />
 
         <Button
             android:id="@+id/doneButton"
@@ -44,6 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:text="@={myName.nickName}"
             android:visibility="gone" />
 
         <ImageView
